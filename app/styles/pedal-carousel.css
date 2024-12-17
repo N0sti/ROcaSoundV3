@@ -1,0 +1,25 @@
+.pedal-carousel {
+  display: flex;
+  width: 200%; /* Double the width to accommodate the duplicated items */
+  animation: scroll 40s linear infinite;
+}
+
+.pedal-item {
+  flex: 0 0 calc(100% / 14); /* 7 items * 2 (for the duplicate set) */
+  padding: 0 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move by half of the carousel width */
+  }
+}
+
+/* Pause animation on hover */
+.pedal-carousel:hover {
+  animation-play-state: paused;
+}
+
